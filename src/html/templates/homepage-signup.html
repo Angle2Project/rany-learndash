@@ -1,0 +1,46 @@
+<% var data = {
+  title: "Title",
+  type: "sign"
+}; %>
+<%= _.template(require('./../imports/_header.html').default)(data) %>
+
+<!-- <svg>
+  <use xlink:href="img/spritemap.svg#icon-rectangle"></use>
+</svg> -->
+
+<main class="sign">
+  <article class="sign-up wrapper">
+    <div class="form">
+      <form action="">
+        <h2>Sign Up</h2>
+        <div class="description">Create an account to access all feature</div>
+        <div class="form-group">
+          <input type="text" class="form-control" placeholder="Name">
+        </div>
+        <div class="form-group">
+          <input type="email" class="form-control" placeholder="Email">
+        </div>
+        <div class="form-group double">
+          <input type="password" class="form-control" placeholder="Pasword">
+          <input type="password" class="form-control" placeholder="Confirm pasword">
+        </div>
+        <div class="submit">
+          <button class="btn green">Sign Up</button>
+          <span>or</span>
+          <button class="btn red google">
+            <img src="./img/google-2.svg" alt="">
+            <span>Sign up with Google</span>
+          </button>
+        </div>
+        <div class="form--footer">
+          <span>
+            Don’t have an account?
+            <a href="">Login</a>
+          </span>
+        </div>
+      </form>
+    </div>
+  </article>
+</main>
+
+<%= _.template(require('./../imports/_footer.html').default)(data) %>

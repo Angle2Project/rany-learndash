@@ -1,0 +1,253 @@
+<% var data = {
+  title: "Title",
+  type: "my-course"  
+}; %>
+<%= _.template(require('./../imports/_header.html').default)(data) %>
+
+<!-- <svg>
+  <use xlink:href="img/spritemap.svg#icon-rectangle"></use>
+</svg> -->
+
+
+<main class="my-course">
+  <div class="wrapper">
+    <aside class="my-course__stats">
+      <div class="photo">
+        <img src="./img/profile-photo.jpg" alt="">
+      </div>
+      <div class="name">Anton Makano</div>
+      <div class="description">I am working as a pharmacy in a world-renowned company</div>
+      <ul class="list">
+        <li>
+          <b>42</b>
+          <span>All</span>
+        </li>
+        <li>
+          <b>12</b>
+          <span>Enrolled</span>
+        </li>
+        <li>
+          <b>7</b>
+          <span>On progress</span>
+        </li>
+        <li>
+          <b>14</b>
+          <span>Completed</span>
+        </li>
+      </ul>
+      <div class="points">
+        <div class="points--title">
+          <span>Your points</span>
+          <b>219</b>
+        </div>
+        <div class="points--secription">
+          <span>See how to get more points</span>
+          <a href="">Learn more</a>
+        </div>
+      </div>
+    </aside>
+    <article class="my-course__list">
+      <h2>My Course</h2>
+      <div class="search">
+        <div class="input">
+          <input type="text" class="form-control" placeholder="Search my course">
+          <button>
+            <svg class="icon-ic-search-cours">
+              <use xlink:href="img/spritemap.svg#icon-ic-search-cours"></use>
+            </svg>            
+          </button>
+        </div>
+        <div class="sort">
+          <select name="">
+            <option value="">Sort by</option>
+            <option value="">name</option>
+            <option value="">date</option>
+            <option value="">a-z</option>
+            <option value="">z-a</option>
+          </select>
+            <svg class="icon-expand">
+              <use xlink:href="img/spritemap.svg#icon-expand"></use>
+            </svg>          
+        </div>
+      </div>
+      <ul class="my-course__tabs">
+        <li class="current" data-target="all">All</li>
+        <li data-target="enrolled">Enrolled</li>
+        <li data-target="progress">On Progress</li>
+        <li data-target="finish">Finish</li>
+      </ul>
+      <% var list = [
+        {
+          p: 90,
+          d: 12,
+          a: 15
+        },
+        {
+          p: 80,
+          d: 15,
+          a: 18
+        },
+        {
+          p: 50,
+          d: 5,
+          a: 10
+        },
+        {
+          p: 80,
+          d: 8,
+          a: 10
+        },
+        {
+          p: 100,
+          d: 12,
+          a: 12
+        },
+        {
+          p: 90,
+          d: 12,
+          a: 15
+        },
+        {
+          p: 80,
+          d: 15,
+          a: 18
+        },
+        {
+          p: 50,
+          d: 5,
+          a: 10
+        },
+        {
+          p: 80,
+          d: 8,
+          a: 10
+        },
+        {
+          p: 100,
+          d: 12,
+          a: 12
+        }        
+      ] %>
+      <ul class="my-course__tabs_list">
+        <!-- Tab All -->
+        <li class="current" id="all">
+          <div class="featured">               
+            <ul class="featured__list">
+              <% for(var i=0; i < list.length; i++) {%>
+              <li>
+                <div class="course--head">
+                  <img src="./img/landing/course-1.jpg" alt="">
+                  <time>28:45</time>
+                </div>
+                <div class="course--info">
+                  <div class="category">surgery</div>
+                  <div class="rate">50 pst</div>
+                </div>
+                <div class="course--name">
+                  <a href="">Measles Outbreak Change Minds Not Vaccinating?</a>
+                </div>
+                <div class="course--author">Mike Kowalski</div>
+                <div class="course--status">
+                  <i style="width:<%=list[i].p%>%"></i>
+                </div>
+                <div class="course--done"><%=list[i].d%> of <%=list[i].a%> to finish</div>
+                <button class="btn btn-border btn-small green">Continue</button>
+              </li>              
+              <% } %>
+            </ul>          
+          </div>
+        </li>
+        <!-- / -->
+        <!-- Tab Enrolled -->
+        <li id="enrolled">
+          <div class="featured">               
+            <ul class="featured__list">
+              <% for(var i=0; i < 5; i++) {%>
+              <li>
+                <div class="course--head">
+                  <img src="./img/landing/course-1.jpg" alt="">
+                  <time>28:45</time>
+                </div>
+                <div class="course--info">
+                  <div class="category">surgery</div>
+                  <div class="rate">50 pst</div>
+                </div>
+                <div class="course--name">
+                  <a href="">Measles Outbreak Change Minds Not Vaccinating?</a>
+                </div>
+                <div class="course--author">Mike Kowalski</div>
+                <div class="course--status">
+                  <i style="width:<%=list[i].p%>%"></i>
+                </div>
+                <div class="course--done"><%=list[i].d%> of <%=list[i].a%> to finish</div>
+                <button class="btn btn-border btn-small green">Continue</button>
+              </li>              
+              <% } %>
+            </ul>          
+          </div>
+        </li>
+        <!-- / -->        
+        <!-- Tab On Progress -->
+        <li id="progress">
+          <div class="featured">               
+            <ul class="featured__list">
+              <% for(var i=0; i < 7; i++) {%>
+              <li>
+                <div class="course--head">
+                  <img src="./img/landing/course-1.jpg" alt="">
+                  <time>28:45</time>
+                </div>
+                <div class="course--info">
+                  <div class="category">surgery</div>
+                  <div class="rate">50 pst</div>
+                </div>
+                <div class="course--name">
+                  <a href="">Measles Outbreak Change Minds Not Vaccinating?</a>
+                </div>
+                <div class="course--author">Mike Kowalski</div>
+                <div class="course--status">
+                  <i style="width:<%=list[i].p%>%"></i>
+                </div>
+                <div class="course--done"><%=list[i].d%> of <%=list[i].a%> to finish</div>
+                <button class="btn btn-border btn-small green">Continue</button>
+              </li>              
+              <% } %>
+            </ul>          
+          </div>
+        </li>
+        <!-- / --> 
+        <!-- Tab Finish -->
+        <li  id="finish">
+          <div class="featured">               
+            <ul class="featured__list">
+              <% for(var i=0; i < 4; i++) {%>
+              <li>
+                <div class="course--head">
+                  <img src="./img/landing/course-1.jpg" alt="">
+                  <time>28:45</time>
+                </div>
+                <div class="course--info">
+                  <div class="category">surgery</div>
+                  <div class="rate">50 pst</div>
+                </div>
+                <div class="course--name">
+                  <a href="">Measles Outbreak Change Minds Not Vaccinating?</a>
+                </div>
+                <div class="course--author">Mike Kowalski</div>
+                <div class="course--status">
+                  <i style="width:100%"></i>
+                </div>
+                <div class="course--done"><%=list[i].a%> of <%=list[i].a%> to finish</div>
+                <button class="btn btn-border btn-small green">Continue</button>
+              </li>              
+              <% } %>
+            </ul>          
+          </div>
+        </li>
+        <!-- / -->        
+      </ul>
+    </article>
+  </div>
+</main>
+
+<%= _.template(require('./../imports/_footer.html').default)(data) %>

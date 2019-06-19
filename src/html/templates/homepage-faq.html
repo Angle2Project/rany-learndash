@@ -1,0 +1,93 @@
+<% var data = {
+  title: "Title",
+  type: "internal"
+}; %>
+<%= _.template(require('./../imports/_header.html').default)(data) %>
+<%= _.template(require('./../imports/_categories.html').default)(data) %>
+
+<!-- <svg>
+  <use xlink:href="img/spritemap.svg#icon-rectangle"></use>
+</svg> -->
+
+<main class="faq">
+  <div class="faq__head">
+    <div class="wrapper">
+      <h2>FAQ</h2>
+    </div>    
+  </div>
+  <div class="faq__new">
+    <div class="photo">
+      <img src="./img/profile-photo.jpg" alt="">
+    </div>
+    <div class="description">
+      <b>Any Question?</b>
+      <span>Let’s discuss about this cource with other</span>
+    </div>
+    <a href="" class="btn btn-border green">Write Question</a>
+  </div>
+  <article class="faq__list wrapper">
+    <% for(var i=0; i < 4; i++) {%>
+      <section class="faq__question">
+        <div class="question--menu">
+          <button>
+            <svg class="icon-more-horiz">
+              <use xlink:href="img/spritemap.svg#icon-more-horiz"></use>
+            </svg>
+          </button>
+        </div>
+        <div class="question--body">              
+          <div class="question--head">
+            <div class="photo">
+              <img src="./img/question-ava.jpg" alt="">
+            </div>
+            <div class="name">
+              <b>Jennifer</b>
+              <span>1 month ago</span>
+            </div>
+          </div>
+          <div class="question--subject">
+            <p>How to give this medicine to allergic children?</p>                
+          </div>
+        </div>
+        <div class="question--answers">
+          <div class="more">
+            <a href="">7 more comments</a>
+          </div>
+          <div class="answer">
+            <div class="question--head">
+              <div class="photo">
+                <img src="./img/answers-ava.jpg" alt="">
+              </div>
+              <div class="name">
+                <b>Erika Karchenko</b>
+                <span>a minutes ago</span>
+              </div>
+            </div>
+            <div class="question--subject">
+              <p>A good course for beginners, good introduction to essential oils. It would be good to have more advanced courses in future</p>
+            </div>
+          </div>
+          <div class="comment--add">
+            <div class="photo">
+              <img src="./img/answers-ava.jpg" alt="">
+            </div>
+            <div class="form">
+              <form action="">
+                <input type="text" class="form-control" placeholder="Write a comment">                    
+                <span class="attachment">
+                  <input type="file">
+                  <svg class="icon-attachment">
+                    <use xlink:href="img/spritemap.svg#icon-attachment"></use>
+                  </svg>                        
+                </span>
+              </form>
+            </div>
+          </div>            
+        </div>
+      </section>
+    <% } %>
+    
+  </article>  
+</main>
+
+<%= _.template(require('./../imports/_footer.html').default)(data) %>

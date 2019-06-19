@@ -1,0 +1,95 @@
+<aside class="categories">
+  <div class="wrapper">
+
+    <% if(type == 'internal') {%>
+      <% var categories = [
+        {
+          name: "Brain",
+          icon: "brain"
+        },
+        {
+          name: "Energy",
+          icon: "energy"
+        },
+        {
+          name: "Eyes",
+          icon: "eyes"
+        },
+        {
+          name: "Sleep",
+          icon: "sleep"
+        },
+        {
+          name: "Stress",
+          icon: "stress"
+        },
+        {
+          name: "Heart",
+          icon: "heart"
+        },
+        {
+          name: "Immunity",
+          icon: "immunity"
+        },
+        {
+          name: "Joins",
+          icon: "joins"
+        },
+        {
+          name: "Skin",
+          icon: "skin"
+        },
+        {
+          name: "Hair",
+          icon: "hair"
+        },
+        {
+          name: "Prenatal",
+          icon: "prenatal"
+        },
+        {
+          name: "Degestion",
+          icon: "digestion"
+        },
+        {
+          name: "Bones",
+          icon: "bones"
+        }
+      ] %>
+
+      <ul class="categories__list">
+        <% for(i in categories){ %>
+        <li>
+          <a href="homepage-category.html">
+            <b>
+              <svg>
+                <use xlink:href="img/spritemap.svg#icon-<%= categories[i].icon %>"></use>
+              </svg>
+            </b>
+            <span><%= categories[i].name %></span>
+          </a>        
+
+        </li>
+        <% } %>
+      </ul>
+      <button class="more">
+        <svg>
+          <use xlink:href="img/spritemap.svg#icon-more"></use>
+        </svg>
+      </button>
+    <% }else{ %>
+      <div class="course__list">        
+        <a href="" class="current">Heathty</a>
+        <a href="homepage-category.html">Antidepressants</a>
+        <a href="homepage-category.html">Antipsychotic</a>
+        <a href="homepage-category.html">Benzodiazephines</a>
+        <a href="homepage-category.html">Dementia</a>
+        <a href="homepage-category.html">Mood stabilizers</a>
+        <a href="homepage-category.html">Stimulants</a>
+        <a href="homepage-category.html">Cancer treatments</a>
+      </div>
+    <% } %>
+
+    
+  </div>
+</aside>

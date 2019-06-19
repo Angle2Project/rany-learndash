@@ -1,0 +1,44 @@
+    <% if(type != 'profile' && type != 'my-course' && type != 'sign') {%>
+      <footer>
+        <img src="./img/bg-footer-1.svg" class="bubble-1" alt="">
+        <img src="./img/bg-footer-2.svg" class="bubble-2" alt="">
+        <img src="./img/bg-footer-3.svg" class="bubble-3" alt="">
+        <div class="wrapper">
+          <div class="header__logo">
+            <a href="">
+              <span>ERNY</span>
+              <i class="green"></i>
+              <i class="violet"></i>
+            </a>
+            <% if(type == "course-details") {%>
+            <div class="footer__adress">
+              iTherapeutics Pharmacy. Suite 11, 79-83
+              <br>
+              High Street KEW, Victoria 3101, Australia
+              <br><br>
+              Dial Auckland: 09 281 5678 
+            </div>
+            <% } %>
+          </div>
+          <ul class="footer__nav">
+            <li>
+              <h5>Usefull Link</h5>
+              <a href="homepage-about.html">About Us</a>
+              <a href="homepage-faq.html">FAQ</a>
+              <a href="">Contact Us</a>
+            </li>
+            <li>
+              <h5>Social Media</h5>
+              <a href="">Facebook</a>
+              <a href="">LinkedIn</a>
+              <a href="">Twitter</a>
+            </li>  
+          </ul>
+        </div>
+        <div class="footer__copytight">© 2019 Erny Inc. All rights reserved.</div>
+      </footer>
+    <% } %>   
+
+    <script src="js/main.js"></script>
+  </body>
+</html>

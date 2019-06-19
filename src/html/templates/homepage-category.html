@@ -1,0 +1,191 @@
+<% var data = {
+  title: "Title",
+  type: "internal"
+}; %>
+<%= _.template(require('./../imports/_header.html').default)(data) %>
+<%= _.template(require('./../imports/_categories.html').default)(data) %>
+
+<!-- <svg>
+  <use xlink:href="img/spritemap.svg#icon-rectangle"></use>
+</svg> -->
+
+<main class="homepage">
+  <div class="category__head">
+    <div class="category__head_slider">
+      <h4>
+        <div class="wrapper">Heathty</div>
+      </h4>
+      <!-- Slider main container -->
+      <div class="swiper-container">
+        <!-- Additional required wrapper -->
+        <div class="swiper-wrapper">      
+          <% for(var i = 0; i < 3; i++) {%>
+            <div class="swiper-slide">
+              <div class="wrapper">
+                <div class="slide--pfoto">
+                  <img src="./img/bg-category-slider.jpg" alt="">
+                </div>
+                <div class="slide--body">
+                  <div class="info">
+                    <span>flu</span>
+                    <time>28:45</time>
+                  </div>
+                  <h5>Measles Outbreak Change Minds Not Vaccinating?</h5>
+                  <div class="name">Mike Kowalski</div>
+                  <div class="description">The Ministry of Health has issued a document detailing regulations around the use of productsThe Ministry of Health gratefully acknowledged the financial support of the
+                      World Health Organisation and assistance through its Consultant for the
+                      successful completion of this policy.</div>
+                  <div class="explore">
+                    <a href="">
+                      <span>Explore Course</span>
+                      <svg class="icon-arrow-right">
+                        <use xlink:href="img/spritemap.svg#icon-arrow-right"></use>
+                      </svg>
+                    </a>
+                  </div>                  
+                </div>
+              </div>                
+            </div>                
+          <% } %>        
+        </div>
+        <!-- If we need pagination -->
+        <div class="swiper-pagination"></div>      
+      </div>      
+    </div>
+
+    <article class="featured featured-course">
+      <div class="wrapper">
+        <div class="featured_head">
+          <h5>Featured Course</h5>
+          <ul class="tabs">
+            <li class="current" data-id="top">Top Course</li>
+            <li data-id="trending">Trending Course</li>
+          </ul>
+        </div>
+        <ul class="tabs-body">
+          <li class="current" id="top">
+            <ul class="featured__list">
+              <% 
+              var list = [
+                'course-1.jpg',
+                'course-2.jpg',
+                'course-3.jpg',
+                'course-4.jpg'            
+              ]
+              %>
+              <% for (var i in list) { %>
+                <li>              
+                  <div class="course--head">
+                    <img src="./img/landing/<%=list[i]%>" alt="">
+                    <time>28:45</time>
+                  </div>
+                  <div class="course--info">
+                    <div class="category">surgery</div>
+                    <div class="rate">50 pst</div>
+                  </div>
+                  <div class="course--name">
+                    <a href="">Measles Outbreak Change Minds Not Vaccinating?</a>
+                  </div>
+                  <div class="course--author">Mike Kowalski</div>
+                </li>
+              <% } %>
+            </ul>
+          </li>
+          <li id="trending">
+            <ul class="featured__list">
+              <% 
+              var list = [
+                'course-1.jpg',
+                'course-2.jpg',
+                'course-3.jpg',
+                'course-4.jpg'            
+              ]
+              %>
+              <% for (var i in list) { %>
+                <li>              
+                  <div class="course--head">
+                    <img src="./img/landing/<%=list[i]%>" alt="">
+                    <time>28:45</time>
+                  </div>
+                  <div class="course--info">
+                    <div class="category">surgery</div>
+                    <div class="rate">50 pst</div>
+                  </div>
+                  <div class="course--name">
+                    <a href="">Measles Outbreak Change Minds Not Vaccinating 2 ?</a>
+                  </div>
+                  <div class="course--author">Mike Kowalski</div>
+                </li>
+              <% } %>
+              </ul>
+          </li>
+        </ul>
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="popular-topics">
+    <div class="wrapper">
+      <h5>Popular Topics</h5>
+      <ul>
+          <% var topicsList = ['CBT', 'Herbalist', 'Therapy', 'Nutrition', 'Yoga', 'Acupressure', 'Fitness', 'Meditation', 'Energy Healing', 'Aromatherapy'] %>     
+          <% for(var i in topicsList) {%>
+          <li <%if(i==1){%>class="current"<%}%>><%=topicsList[i]%></li>
+          <% } %>
+      </ul>
+    </div>    
+  </div>
+
+  <article class="featured full-course-list">
+      <div class="wrapper">
+        <div class="featured_head">
+          <h5>Full Course Catalog</h5>
+          <button class="btn btn-border filter">
+            <svg class="icon-ic-filter">
+              <use xlink:href="img/spritemap.svg#icon-ic-filter"></use>
+            </svg>
+            <span>Filter</span>              
+          </button>
+        </div>
+        <ul class="featured__list">
+            <% 
+            var list = [
+              'course-1.jpg',
+              'course-2.jpg',
+              'course-3.jpg',
+              'course-4.jpg',
+              'course-1.jpg',
+              'course-2.jpg',
+              'course-3.jpg',
+              'course-4.jpg',
+              'course-1.jpg',
+              'course-2.jpg',
+              'course-3.jpg',
+              'course-4.jpg'
+            ]
+            %>
+            <% for (var i in list) { %>
+              <li>              
+                <div class="course--head">
+                  <img src="./img/landing/<%=list[i]%>" alt="">
+                  <time>28:45</time>
+                </div>
+                <div class="course--info">
+                  <div class="category">surgery</div>
+                  <div class="rate">50 pst</div>
+                </div>
+                <div class="course--name">
+                  <a href="">Measles Outbreak Change Minds Not Vaccinating?</a>
+                </div>
+                <div class="course--author">Mike Kowalski</div>
+              </li>
+            <% } %>
+        </ul>
+      </div>
+    </article>
+
+    <%= _.template(require('./../imports/_pagination.html').default)(data) %>    
+</main>
+
+<%= _.template(require('./../imports/_footer.html').default)(data) %>

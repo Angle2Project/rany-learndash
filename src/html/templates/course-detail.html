@@ -1,0 +1,464 @@
+[[<% var data = {
+  title: "Title",
+  type: "course-details"
+}; %>
+<%= _.template(require('./../imports/_header.html').default)(data) %>
+<%= _.template(require('./../imports/_categories.html').default)(data) %>
+
+<!-- <svg>
+  <use xlink:href="img/spritemap.svg#icon-rectangle"></use>
+</svg> -->
+
+
+<main class="course details">
+  <div class="details__head">
+    <div class="wrapper">
+      <h4>Aromatherapy Course for All</h4>
+      <div class="details__head_description">
+        Aromatherapy - Learn everything you need to know to understand the basics 
+        <br>
+        of Aromatherapy, Level 1 Diploma
+      </div>
+      <div class="details__head_stat">
+        <div class="enrolled">
+          <svg class="icon-ic-user">
+            <use xlink:href="img/spritemap.svg#icon-ic-user"></use>
+          </svg>
+          <span>649 people enrolled</span>
+        </div>
+        <div class="rating">
+          <div class="star-rate rate-4">
+            <svg class="icon-star-stroke">
+              <use xlink:href="img/spritemap.svg#icon-star-filled"></use>
+            </svg>
+            <div class="star-filled">
+              <svg class="icon-star-filled">
+                <use xlink:href="img/spritemap.svg#icon-star-filled"></use>
+              </svg>
+            </div>
+          </div>
+          <span>( 29 Review )</span>
+        </div>
+      </div>      
+      <ul class="details__head_tabs">
+        <li class="current" data-target="detail">Detail</li>
+        <li data-target="faq">FAQ</li>
+        <li data-target="rating">Rating & Review</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="details__table wrapper">
+    <article>
+
+      <ul class="details__table_tabs">
+        <!---------------------- Detail -------------------->
+        <li id="detail" class="current">
+          <section class="descriptions">        
+            <h5>Descriptions</h5>
+            <div class="toggle">
+              <div class="toggle--wrapper">
+                <p>This course is designed to introduce you to Aromatherapy and the wonderful, magical healing properties of plants, flowers, trees, and seeds. This is the Level 1 Diploma and there are 3 more levels should you wish to grow your knowledge and skills.</p>
+                <p></p>
+                <p>Aromatherapy is thousands of years old and is our original mediciine, it is said that for every illness that exists that there is a cure to be found in the plant kingdom. </p>
+                <p></p>
+                <p>Learn the science of Aromatherapy and how using essential oils can support you physically, emotionally, mentally and even spiritually. Essential oils lift our vibrational frequency by a process called "entrainment", they are magical !</p>
+                <p></p>
+                <p>The course covers a very thorough working knowledge of aromatherapy techniques using the 2 main methods of use - topical application and inhalation.</p>
+                <p></p>
+                <p>You will learn everything you need to know to practise aromatherapy on your friends, family and yourself. </p>
+                <p></p>
+                <p>You will be guided through every step of the course and there are live demos of the 4 aromatherapy massage techniques that you will learn and also live demos of how to make beautiful organic aromatherapy products for the home. </p>
+                <p></p>
+                <p>Your course is certificated by the Academy of Ancient Magik and has been accredited by the IAOTH (International Association of Therapists). On completion of the course you will be entitled to an external accredited diploma certificate  from the Academy of Ancient Magik and you will be eligible for discounted membership of the IAOTH  which includes a free directory listing on their website to kickstart your business as a therapist.</p>              
+              </div>            
+            </div>
+            <div class="more">
+              <a href="" data-action="details-more-content">See more</a>
+            </div>        
+          </section>
+          <section class="learn-list">
+            <h5>What you'll learn</h5>
+            <ul>
+              <li>You will be able to work with essential oils and aromatherapy techniques with friends and family</li>
+              <li>You will have an indepth knowledge of the history of aromatherapy</li>
+              <li>You will be able to mix and dilute essential oils to make magical homemade recipes</li>
+              <li>You will learn 4 different aromatherapy massage techniques that you can use on friends and family</li>
+              <li>You will be shown how to create wonderful organic aromatherapy home products</li>
+              <li>You will learn 8 different aromatherapy diffusing techniques with 18 free recipes</li>
+            </ul>
+          </section>
+          <section class="content">
+            <h5>Cources Content</h5>
+            <ul class="content--list">
+              <%
+                var list = [
+                  'Introduction about Aromatherapy',
+                  'Preparing Essential Oils for Aromatherapy Use',
+                  'Aromatherapy Techniques',
+                  'Aromatherapy - Internal Application',
+                  'Safety Around Using Aromatherapy Essential Oils'
+                ];
+                var sub = [
+                'Diluting Essential Oils and Why do it',
+                'A Little Extra Information About Carrier Oils',
+                'How Do You Dilute - Summar',
+                'Essential Oils versus Drugs'
+              ];          
+              %>
+              <% for(var i in list) {%>
+                <li>
+                  <div class="list--title">Introduction about Aromatherapy</div>
+                  <ul class="list--sub">
+                    <% for(var i in sub) {%>
+                      <li>
+                        <svg class="icon-play-circle">
+                          <use xlink:href="img/spritemap.svg#icon-play-circle"></use>
+                        </svg>
+                        <span><%=sub[i]%></span>
+                        <time>00:01:25</time>
+                      </li>
+                    <% } %>              
+                  </ul>
+                </li>
+              <% } %>          
+            </ul>
+            <div class="more">
+              <a href="">See more</a>
+            </div>
+          </section>
+        </li>
+        <!---------------------- / ------------------------->
+
+        <!---------------------- FAQ ------------------------>
+        <li id="faq">
+          <section class="faq__wright">
+            <div class="wright--text">
+              <h5>Any Question?</h5>
+              <span>Let’s discuss about this cource with other</span>
+            </div>
+            <button class="btn btn-border green">Write Question</button>
+          </section>
+
+          <section class="faq__question">
+            <div class="question--menu">
+              <button>
+                <svg class="icon-more-horiz">
+                  <use xlink:href="img/spritemap.svg#icon-more-horiz"></use>
+                </svg>
+              </button>
+            </div>
+            <div class="question--body">              
+              <div class="question--head">
+                <div class="photo">
+                  <img src="./img/question-ava.jpg" alt="">
+                </div>
+                <div class="name">
+                  <b>Jennifer</b>
+                  <span>1 month ago</span>
+                </div>
+              </div>
+              <div class="question--subject">
+                <p>How to give this medicine to allergic children?</p>                
+              </div>
+            </div>
+            <div class="question--answers">
+              <div class="more">
+                <a href="">7 more comments</a>
+              </div>              
+
+              <div class="answer">
+                <div class="question--head">
+                  <div class="photo">
+                    <img src="./img/answers-ava.jpg" alt="">
+                  </div>
+                  <div class="name">
+                    <b>Erika Karchenko</b>
+                    <span>a minutes ago</span>
+                  </div>
+                </div>
+                <div class="question--subject">
+                  <p>A good course for beginners, good introduction to essential oils. It would be good to have more advanced courses in future</p>
+                </div>
+              </div>
+              <div class="comment--add">
+                <div class="photo">
+                  <img src="./img/answers-ava.jpg" alt="">
+                </div>
+                <div class="form">
+                  <form action="">
+                    <input type="text" class="form-control" placeholder="Write a comment">                    
+                    <span class="attachment">
+                      <input type="file" />
+                      <svg class="icon-attachment">
+                        <use xlink:href="img/spritemap.svg#icon-attachment"></use>
+                      </svg>                        
+                    </span>
+                  </form>
+                </div>
+              </div>
+              
+            </div>
+          </section>
+          <section class="faq__question">
+              <div class="question--body">
+                <div class="question--menu">
+                  <button>
+                    <svg class="icon-more-horiz">
+                      <use xlink:href="img/spritemap.svg#icon-more-horiz"></use>
+                    </svg>
+                  </button>
+                </div>
+                <div class="question--head">
+                  <div class="photo">
+                    <img src="./img/question-ava.jpg" alt="">
+                  </div>
+                  <div class="name">
+                    <b>Jennifer</b>
+                    <span>1 month ago</span>
+                  </div>
+                </div>
+                <div class="question--subject">
+                  <p>How to give this medicine to allergic children?</p>
+                  <p></p> 
+                  <p>
+                    <img src="./img/faq-img.jpg" alt="">
+                  </p>                 
+                </div>
+              </div>
+              <div class="question--answers">
+                <div class="more">
+                  <a href="">7 more comments</a>
+                </div>                
+  
+                <div class="answer">
+                  <div class="question--head">
+                    <div class="photo">
+                      <img src="./img/answers-ava.jpg" alt="">
+                    </div>
+                    <div class="name">
+                      <b>Erika Karchenko</b>
+                      <span>a minutes ago</span>
+                    </div>
+                  </div>
+                  <div class="question--subject">
+                    <p>A good course for beginners, good introduction to essential oils. It would be good to have more advanced courses in future</p>                    
+                  </div>
+                </div>
+                <div class="comment--add">
+                  <div class="photo">
+                    <img src="./img/answers-ava.jpg" alt="">
+                  </div>
+                  <div class="form">
+                    <form action="">
+                      <input type="text" class="form-control" placeholder="Write a comment">                      
+                      <span class="attachment">
+                        <input type="file">
+                        <svg class="icon-attachment">
+                          <use xlink:href="img/spritemap.svg#icon-attachment"></use>
+                        </svg>                        
+                      </span>
+                    </form>
+                  </div>
+                </div>
+                
+              </div>
+            </section>
+
+            <div class="faq__more">
+              <a href="">See More</a>
+            </div>
+            
+            <section class="faq__new">
+              <h5>Pertanyaan Baru</h5>
+              <div class="form">
+                <form action="">
+                  <div class="message">
+                    <textarea name="" placeholder="Apakah yang ingin anda tanyakan tentang kelas ini?"></textarea>
+                  </div>
+                  <div class="submit">
+                    <span class="attachment">
+                      <input type="file">
+                      <svg class="icon-attachment">
+                        <use xlink:href="img/spritemap.svg#icon-attachment"></use>
+                      </svg>                        
+                    </span>
+                    <button class="btn green btn-small">Submit</button>
+                  </div>
+                </form>
+              </div>
+            </section>
+        </li>
+        <!---------------------- / ------------------------->
+
+        <!----------------- Rating & Review ----------------->
+        <li id="rating">
+          <section class="rating__overall">
+            <div class="point">4.7</div>
+            <div class="starts">
+              <div class="star-rate rate-4">
+                <svg class="icon-star-stroke">
+                  <use xlink:href="img/spritemap.svg#icon-star-filled"></use>
+                </svg>
+                <div class="star-filled">
+                  <svg class="icon-star-filled">
+                    <use xlink:href="img/spritemap.svg#icon-star-filled"></use>
+                  </svg>
+                </div>
+              </div>
+              <span>Course Rating</span>
+            </div>
+          </section>
+          <section class="rating__list">
+            <% var ratingList = [
+              {
+                name: "Lara Cloft",
+                rate: 4,
+                time: "1 month ago",
+                text: "<p>Such a wonderful course. I enjoyed it so much. It has lots of great information and I really appreciated that you included frequency information in it. I found this fascinating and have not come across this information in other presentations. Very enlightening. The course created an organized thread of understanding of simple but profound information into the plant world. Thank you so much for offering this teaching.</p>"
+              },
+              {
+                name: "Anderson Okoye",
+                rate: 5,
+                time: "2 days ago",
+                text: "<p>A good course for beginners, good introduction to essential oils. It would be good to have more advanced courses in future</p>"
+              },
+              {
+                name: "Tiffany Ann",
+                rate: 5,
+                time: "10 minutes ago",
+                text: "<p>loving this course learning so much very enjoyable and would recommend this to my friends</p><p></p><p>learnt quiet a lot about essential oils and their uses very good tips on where to source Essential Oils also</p><p></p><p>thoroughly enjoyed the whole course</p>"
+              }
+            ] %>
+
+            <% for(var i in ratingList) {%>
+              <div class="list--message">
+                <div class="message--photo">
+                    <img src="./img/question-ava.jpg" alt="">
+                </div>
+                <div class="message--body">
+                  <div class="head">
+                    <div class="name">
+                      <h5><%=ratingList[i].name%></h5>
+                      <div class="star-rate rate-<%=ratingList[i].rate%>">
+                        <svg class="icon-star-stroke">
+                          <use xlink:href="img/spritemap.svg#icon-star-filled"></use>
+                        </svg>
+                        <div class="star-filled">
+                          <svg class="icon-star-filled">
+                            <use xlink:href="img/spritemap.svg#icon-star-filled"></use>
+                          </svg>
+                        </div>
+                      </div>                  
+                    </div>
+                    <time><%=ratingList[i].time%></time>
+                  </div>
+                  <div class="subject">
+                      <%=ratingList[i].text%>
+                  </div>
+                </div>              
+              </div>
+            <% } %>            
+          </section>
+        </li>
+        <!---------------------- / ------------------------->
+      </ul>      
+    </article>
+    <div class="aside">
+      <aside>
+        <section class="preview">
+          <img src="./img/course-details-right.jpg" alt="">
+        </section>
+        <section class="info">
+          <span>surgery</span>
+          <time>28:45</time>  
+        </section>
+        <section class="action">
+          <button class="btn green">Take Course</button>
+        </section>
+        <section class="include">
+          <h5>Include</h5>
+          <ul>
+            <% var includeList = [
+              '3 hours on-demand video',
+              '20 articles',
+              '25 downloadable resources',
+              'Full lifetime access',
+              'Certificate of Completion'
+            ] %>
+  
+            <% for(var i in includeList) {%>  
+              <li><%=includeList[i]%></li>
+            <% } %>
+          </ul>
+        </section>
+        <section class="author">
+          <h5>Created by</h5>
+          <div class="author--wrapper">
+            <div class="author--photo">
+              <img src="./img/auhtor-photo.jpg" alt="">
+            </div>
+            <div class="author--name">
+              <h4>Pharmaton</h4>
+              <div class="company">E-Learning Company</div>
+            </div>
+          </div>
+        </section>
+        <section class="share">
+          <h5>Share</h5>
+          <div class="share--list">
+            <a href="">
+              <img src="./img/facebook.svg" alt="">
+            </a>
+            <a href="">
+              <img src="./img/twitter.svg" alt="">
+            </a>
+            <a href="">
+              <img src="./img/google.svg" alt="">
+            </a>
+            <a href="">
+              <img src="./img/linkedin.svg" alt="">
+            </a>
+          </div>
+          <div class="share--text">Share this course so that more people know it</div>
+        </section>
+      </aside>
+    </div>
+  </div>
+
+  <article class="featured related-cources">
+    <div class="wrapper">
+      <div class="featured_head">
+        <h5>Related Cources</h5>        
+      </div>
+      <ul class="featured__list">
+          <% 
+          var list = [
+            'course-1.jpg',
+            'course-2.jpg',
+            'course-3.jpg',
+            'course-4.jpg'            
+          ]
+          %>
+          <% for (var i in list) { %>
+            <li>              
+              <div class="course--head">
+                <img src="./img/landing/<%=list[i]%>" alt="">
+                <time>28:45</time>
+              </div>
+              <div class="course--info">
+                <div class="category">surgery</div>
+                <div class="rate">50 pst</div>
+              </div>
+              <div class="course--name">
+                <a href="">Measles Outbreak Change Minds Not Vaccinating?</a>
+              </div>
+              <div class="course--author">Mike Kowalski</div>
+            </li>
+          <% } %>
+      </ul>
+    </div>
+  </article>
+</main>
+
+<%= _.template(require('./../imports/_footer.html').default)(data) %>]]

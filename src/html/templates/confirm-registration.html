@@ -1,0 +1,26 @@
+<% var data = {
+  title: "Title",
+  type: "sign"
+}; %>
+<%= _.template(require('./../imports/_header.html').default)(data) %>
+
+<!-- <svg>
+  <use xlink:href="img/spritemap.svg#icon-rectangle"></use>
+</svg> -->
+
+<main class="sign">
+<article class="confirm">
+  <div class="icon">
+    <img src="./img/email-konfirmation.svg" alt="">
+  </div>
+  <h2>Congratulation</h2>
+  <div class="description">Congratulations you successful registration. Please confirm by following the link that was sent to your email <a href="mailto:michaelmark@gmail.com">michaelmark@gmail.com</a></div>
+  <div class="form--footer">
+    <span>
+      Didn't get a confirmation email? Resend <a href="">Login</a>      
+    </span>
+  </div>
+</article>
+</main>
+
+<%= _.template(require('./../imports/_footer.html').default)(data) %>

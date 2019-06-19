@@ -1,0 +1,139 @@
+footer {
+	background-image: linear-gradient(80deg, #5f62e6, #9c7af2);
+	padding-top: 120px;
+	position: relative;
+	.bubble-1 {
+		position: absolute;
+		width: 154px;
+		height: 56.9px;
+		top: 0;
+		left: 0;
+		z-index: 0;
+	}
+	.bubble-2 {
+		position: absolute;
+		width: 775px;
+  	height: 379.9px;
+		top: 0;
+		right: 123px;
+		z-index: 0;
+	}
+	.bubble-3 {
+		position: absolute;
+		width: 441px;
+  	height: 196.1px;
+		bottom: 0;
+		left: 304px;
+		z-index: 0;
+	}
+	.header__logo {
+		position: relative;
+		a {
+			color: #fff;
+		}
+		i::before,
+		i::after {
+			background-color: #fff!important;
+		}
+	}
+	.wrapper {
+		display: flex;
+		justify-content: space-between;
+	}
+	.footer__adress {
+		margin-top: 40px;
+		font-family: $fontPrimary;
+		font-size: 14px;
+		font-weight: normal;
+		font-style: normal;
+		font-stretch: normal;
+		line-height: 1.86;
+		letter-spacing: normal;
+		color: $greyText;
+	}
+	.footer__nav {
+		display: flex;
+		margin-bottom: 88px;
+		margin-right: 160px;
+		position: relative;
+		li {
+			margin-right: 190px;
+			display: flex;
+			flex-direction: column;
+			&:last-child {
+				margin-right: 0;
+			}
+			h5 {
+				font-family: $fontTitle;
+				font-size: 18px;
+				font-weight: bold;
+				font-style: normal;
+				font-stretch: normal;
+				line-height: normal;
+				letter-spacing: 0.5px;
+				color: #ffffff;
+				margin: 0 0 24px 0;
+				padding: 0;				
+			}
+			a {
+				font-size: 16px;
+				font-weight: normal;
+				font-style: normal;
+				font-stretch: normal;
+				line-height: 2.25;
+				letter-spacing: normal;
+				opacity: 0.6;
+				color: #ffffff;
+			}
+		}
+	}
+	.footer__copytight {
+		height: 80px;
+		background-color: #2d2994;
+		position: relative;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		font-family: $fontPrimary;
+		font-size: 14px;
+		font-weight: normal;
+		font-style: normal;
+		font-stretch: normal;
+		line-height: normal;
+		letter-spacing: 0.5px;
+		color: #817ebe;
+	}
+}
+.course-details {
+	footer {
+		background: initial;
+		img {
+			display: none;
+		}
+		.header__logo {
+			a {
+			color: initial;
+			}
+			i.green::after,
+			i.green::before {
+				background-color: #4ab33a!important;
+			}
+			i.violet::after,
+			i.violet::before {
+				background-color: #758deb!important;
+			}
+		}		
+		.footer__nav {
+			h5 {
+				color: $dark;
+			}
+			a {
+				color: $greyText;
+			}
+		}
+		.footer__copytight {
+			background-color: #fff;
+			color: #a3a9b5;
+		}
+	}
+}

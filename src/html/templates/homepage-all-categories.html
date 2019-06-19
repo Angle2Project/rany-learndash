@@ -1,0 +1,147 @@
+<% var data = {
+  title: "Title",
+  type: "internal"
+}; %>
+<%= _.template(require('./../imports/_header.html').default)(data) %>
+<%= _.template(require('./../imports/_categories.html').default)(data) %>
+
+<!-- <svg>
+  <use xlink:href="img/spritemap.svg#icon-rectangle"></use>
+</svg> -->
+
+<main class="homepage">
+  <div class="homepage__hero">
+    <!-- Slider main container -->
+    <div class="swiper-container">
+      <!-- Additional required wrapper -->
+      <div class="swiper-wrapper">      
+        <% for(var i = 0; i < 3; i++) {%>
+          <div class="swiper-slide" style="background-image: url('./img/homepage-hero.jpg')">
+            <div class="wrapper">              
+              <h3>
+                Measles Outbreak Change
+                <br>
+                Minds Not Vaccinating?
+              </h3>
+              <div class="homepage__hero_text">
+                An online e-learning platform for the pharmacy and
+                <br>
+                healthcare retail space.
+              </div>
+              <div class="homepage__hero_buttons">
+                <a href="course-detail.html" class="btn short green">View Detail</a>
+              </div>              
+            </div>
+          </div>
+        <% } %>        
+      </div>
+      <!-- If we need pagination -->
+      <div class="swiper-pagination"></div>      
+    </div>
+  </div>
+
+  <article class="landing__featured">
+    <div class="wrapper">
+      <div class="landing__featured_head">
+        <h3>Recommended</h3>
+        <a href="" class="btn btn-small btn-border green">More</a>
+      </div>
+      <ul class="landing__featured_list">
+          <% 
+          var list = [
+            'course-1.jpg',
+            'course-2.jpg',
+            'course-3.jpg',
+            'course-4.jpg'            
+          ]
+          %>
+          <% for (var i in list) { %>
+            <li>              
+              <div class="course--head">
+                <img src="./img/landing/<%=list[i]%>" alt="">
+                <time>28:45</time>
+              </div>
+              <div class="course--info">
+                <div class="category">Cancer</div>
+                <div class="rate">50 pst</div>
+              </div>
+              <div class="course--name">
+                <a href="">Measles Outbreak Change Minds Not Vaccinating?</a>
+              </div>
+              <div class="course--author">Mike Kowalski</div>
+            </li>
+          <% } %>
+      </ul>
+    </div>
+  </article>
+  <article class="landing__featured">
+    <div class="wrapper">
+      <div class="landing__featured_head">
+        <h3>Recent</h3>
+        <a href="" class="btn btn-small btn-border green">More</a>
+      </div>
+      <ul class="landing__featured_list">
+          <% 
+          var list = [
+            'course-1.jpg',
+            'course-2.jpg',
+            'course-3.jpg',
+            'course-4.jpg'            
+          ]
+          %>
+          <% for (var i in list) { %>
+            <li>              
+              <div class="course--head">
+                <img src="./img/landing/<%=list[i]%>" alt="">
+                <time>28:45</time>
+              </div>
+              <div class="course--info">
+                <div class="category">surgery</div>
+                <div class="rate">50 pst</div>
+              </div>
+              <div class="course--name">
+                <a href="">Measles Outbreak Change Minds Not Vaccinating?</a>
+              </div>
+              <div class="course--author">Mike Kowalski</div>
+            </li>
+          <% } %>
+      </ul>
+    </div>
+  </article>
+  <article class="landing__featured">
+    <div class="wrapper">
+      <div class="landing__featured_head">
+        <h3>New</h3>
+        <a href="" class="btn btn-small btn-border green">More</a>
+      </div>
+      <ul class="landing__featured_list">
+          <% 
+          var list = [
+            'course-1.jpg',
+            'course-2.jpg',
+            'course-3.jpg',
+            'course-4.jpg'            
+          ]
+          %>
+          <% for (var i in list) { %>
+            <li>              
+              <div class="course--head">
+                <img src="./img/landing/<%=list[i]%>" alt="">
+                <time>28:45</time>
+              </div>
+              <div class="course--info">
+                <div class="category">surgery</div>
+                <div class="rate">50 pst</div>
+              </div>
+              <div class="course--name">
+                <a href="">Measles Outbreak Change Minds Not Vaccinating?</a>
+              </div>
+              <div class="course--author">Mike Kowalski</div>
+            </li>
+          <% } %>
+      </ul>
+    </div>
+  </article>
+</main>
+
+<%= _.template(require('./../imports/_footer.html').default)(data) %>

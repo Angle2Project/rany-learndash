@@ -1,0 +1,54 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="75" height="76" viewBox="0 0 75 76">
+    <defs>
+        <linearGradient id="a" x1="83.054%" x2="10.184%" y1="11.871%" y2="82.338%">
+            <stop offset="0%" stop-color="#FAFBFF"/>
+            <stop offset="100%" stop-color="#ECF1FB"/>
+        </linearGradient>
+        <path id="c" d="M23.225 5.412C16.376.321 8.635-.994 0 1.468v30.303c7.817-1.738 15.559.158 23.225 5.688V5.412z"/>
+        <filter id="b" width="516.7%" height="322.6%" x="-258.3%" y="-107.5%" filterUnits="objectBoundingBox">
+            <feMorphology in="SourceAlpha" radius="10" result="shadowSpreadOuter1"/>
+            <feOffset dy="20" in="shadowSpreadOuter1" result="shadowOffsetOuter1"/>
+            <feGaussianBlur in="shadowOffsetOuter1" result="shadowBlurOuter1" stdDeviation="20"/>
+            <feColorMatrix in="shadowBlurOuter1" values="0 0 0 0 0.450980392 0 0 0 0 0.752941176 0 0 0 0 0.17254902 0 0 0 1 0"/>
+        </filter>
+        <path id="d" d="M34.285.147v2c-7.67 0-11.472 1.329-16.214 5.35l-.657.557-.649-.568a20.8 20.8 0 0 0-3.34-2.395C9.29 2.711 5.581 2.106.552 2.144c-.344.003-.416.003-.552.003v-2L.537.145c5.354-.04 9.37.613 13.886 3.214A22.7 22.7 0 0 1 17.43 5.43C22.262 1.512 26.5.147 34.285.147z"/>
+        <path id="f" d="M34.285.147v2c-7.67 0-11.472 1.329-16.214 5.35l-.657.557-.649-.568a20.8 20.8 0 0 0-3.34-2.395C9.29 2.711 5.581 2.106.552 2.144c-.344.003-.416.003-.552.003v-2L.537.145c5.354-.04 9.37.613 13.886 3.214A22.7 22.7 0 0 1 17.43 5.43C22.262 1.512 26.5.147 34.285.147z"/>
+        <path id="h" d="M34.285.147v2c-7.67 0-11.472 1.329-16.214 5.35l-.657.557-.649-.568a20.8 20.8 0 0 0-3.34-2.395C9.29 2.711 5.581 2.106.552 2.144c-.344.003-.416.003-.552.003v-2L.537.145c5.354-.04 9.37.613 13.886 3.214A22.7 22.7 0 0 1 17.43 5.43C22.262 1.512 26.5.147 34.285.147z"/>
+        <path id="j" d="M34.285.147v2c-7.67 0-11.472 1.329-16.214 5.35l-.657.557-.649-.568a20.8 20.8 0 0 0-3.34-2.395C9.29 2.711 5.581 2.106.552 2.144c-.344.003-.416.003-.552.003v-2L.537.145c5.354-.04 9.37.613 13.886 3.214A22.7 22.7 0 0 1 17.43 5.43C22.262 1.512 26.5.147 34.285.147z"/>
+    </defs>
+    <g fill="none" fill-rule="evenodd" transform="translate(0 .871)">
+        <ellipse cx="37.5" cy="37.495" fill="url(#a)" rx="37.5" ry="37.495"/>
+        <g transform="translate(17 17.997)">
+            <use fill="#000" filter="url(#b)" xlink:href="#c"/>
+            <use fill="#3DD280" xlink:href="#c"/>
+        </g>
+        <g transform="translate(22.85 41.916)">
+            <mask id="e" fill="#fff">
+                <use xlink:href="#d"/>
+            </mask>
+            <use fill="#FFF" fill-rule="nonzero" xlink:href="#d"/>
+            <path fill="#6E72CC" d="M17.375-1H35.15v9.999H17.375z" mask="url(#e)"/>
+        </g>
+        <g transform="translate(22.85 35.917)">
+            <mask id="g" fill="#fff">
+                <use xlink:href="#f"/>
+            </mask>
+            <use fill="#FFF" fill-rule="nonzero" xlink:href="#f"/>
+            <path fill="#6E72CC" d="M17.375-1H35.15v9.999H17.375z" mask="url(#g)"/>
+        </g>
+        <g transform="translate(22.85 29.918)">
+            <mask id="i" fill="#fff">
+                <use xlink:href="#h"/>
+            </mask>
+            <use fill="#FFF" fill-rule="nonzero" xlink:href="#h"/>
+            <path fill="#6E72CC" d="M17.375-1H35.15v9.999H17.375z" mask="url(#i)"/>
+        </g>
+        <g transform="translate(22.85 23.919)">
+            <mask id="k" fill="#fff">
+                <use xlink:href="#j"/>
+            </mask>
+            <use fill="#FFF" fill-rule="nonzero" xlink:href="#j"/>
+            <path fill="#6E72CC" d="M17.375-1H35.15v9.999H17.375z" mask="url(#k)"/>
+        </g>
+    </g>
+</svg>

@@ -1,0 +1,211 @@
+<% var data = {
+  title: "Title",
+  type: "landing"
+}; %>
+<%= _.template(require('./../imports/_header.html').default)(data) %>
+
+<!-- <svg>
+  <use xlink:href="img/spritemap.svg#icon-rectangle"></use>
+</svg> -->
+
+<main class="landing">
+  <article class="landing__hero index">
+    <div class="landing__hero_img">
+      <img src="./img/illustration-index.svg" alt="">
+    </div> 
+    <div class="wrapper">
+      <section>
+        <h2>Online product education platform, made easy</h2>
+        <div class="landing__text">Erny is an online learning platform for the healthcare retail industry. Creating a centralised database for professionals and retailers to access supplier product knowledge.</div>
+        <div class="landing__buttons">
+          <a href="homepage-retailer.html" class="btn green">For Healthcare retailers</a>
+          <a href="homepage-supplier.html" class="btn violet">For Suppliers</a>
+        </div>
+      </section>
+    </div>
+  </article>
+  <article class="landing__bubble right reach">
+    <div class="wrapper">
+      <section>
+      <h3>Reach healthcare retailers nationwide</h2>
+      <div class="landing__text">An online e-learning platform for the pharmacy and healthcare retail space. Making it easier for pharmacies to access everything in one place.</div>
+      <div class="landing__buttons">
+        <a href="homepage-supplier.html" class="btn green">Discover for Suppliers</a>
+      </div>
+    </section>
+    </div>
+  </article>
+  <article class="landing__bubble left access">
+    <div class="wrapper">
+      <section>
+      <h3>Access product knowledge in one place</h2>
+      <div class="landing__text">Erny centralises product knowledge, making it easy to learn about all your favourite brands in one place.</div>
+      <div class="landing__buttons">
+        <a href="homepage-retailer.html" class="btn btn-border green">Discover for Retailers</a>        
+      </div>
+    </section>
+    </div>
+  </article>
+
+  <article class="landing__tabs">
+    <div class="wrapper">
+      <section>
+        <div class="tabs--label retailers">Retailers</div>
+        <h4>
+          Product knowledge
+          <br>
+          at your fingertips
+        </h4>
+        <div class="landing__text">Erny is an elearning platfom designed to centralise all content for healthcare retail products in one place. Learning and up-skilling on your favourite brands has never been easier, and it's free!</div>
+        <a href="homepage-retailer.html" class="btn btn-border green">Discover for Retailers</a>        
+      </section>
+      <section>
+        <div class="tabs--label brands">Brands</div>
+        <h4>
+          What in more detail
+          <br>
+          about product
+        </h4>
+        <div class="landing__text">The most important aspect of product sales is educating your front-line retail staff. Erny allows you to train and teach healthcare retailers nationwide with the click of a button</div>
+        <a href="homepage-supplier.html" class="btn btn-border green">Discover for Suppliers</a>        
+      </section>
+    </div>
+  </article>
+  <article class="landing__hit retailer">
+    <div class="landing__hit_bg">      
+      <div class="wrapper">
+        <div class="landing__hit_title">How it works</div>
+        <h3>We make it easy</h3>
+        <ul class="landing__hit_switcher" data-action="landing-hit-switch">
+          <li class="current" data-target="supplier">
+            <span>Supplier/Brand</span>
+          </li>
+          <li data-target="retailer">
+            <span>Retailer/Professional</span>
+          </li>
+        </ul>
+        <ul class="landing__hit_list">
+          <li>
+            <img src="./img/bg-hit-1.svg" alt="">
+            <section>
+              <div class="list--title">Sign up</div>
+              <div class="list--text">Click the sign up button above and gain access to our database in less than a minute!</div>
+            </section>
+          </li>
+          <li>
+            <img src="./img/bg-hit-2.svg" alt="">
+            <section>
+              <div class="list--title">Set your Profile</div>
+              <div class="list--text">Let us, and the community, know who you are by filling in the profile fields.</div>
+            </section>
+          </li>
+          <li>
+            <img src="./img/bg-hit-3.svg" alt="">
+            <section>
+              <div class="list--title">Start learning</div>
+              <div class="list--text">Go through our courses, start learning or perhaps save them for later</div>
+            </section>
+          </li>
+        </ul>
+      </div>
+    </div>     
+  </article>
+  <article class="landing__featured">
+    <div class="wrapper">
+      <div class="landing__featured_head">
+        <h3>Featured courses</h3>
+        <a href="" class="btn btn-small green">More</a>
+      </div>
+      <ul class="landing__featured_list">
+          <% 
+          var list = [
+            'course-1.jpg',
+            'course-2.jpg',
+            'course-3.jpg',
+            'course-4.jpg',
+            'course-1.jpg',
+            'course-2.jpg',
+            'course-3.jpg',
+            'course-4.jpg'
+          ]
+          %>
+          <% for (var i in list) { %>
+            <li>              
+              <div class="course--head">
+                <img src="./img/landing/<%=list[i]%>" alt="">
+                <time>28:45</time>
+              </div>
+              <div class="course--info">
+                <div class="category">surgery</div>
+                <div class="rate">50 pst</div>
+              </div>
+              <div class="course--name">
+                <a href="">Measles Outbreak Change Minds Not Vaccinating?</a>
+              </div>
+              <div class="course--author">Mike Kowalski</div>
+            </li>
+          <% } %>
+      </ul>
+    </div>
+  </article>
+  <article class="landing__testimonials">    
+      <div class="landing__testimonials_head">
+        <div class="wrapper">
+          <h3>Testimonials</h3>
+          <div class="slider--nav">
+            <div class="prev">
+              <svg>
+                <use xlink:href="img/spritemap.svg#icon-landing-slider-left"></use>
+              </svg>
+            </div>
+            <div class="next">
+              <svg>
+                <use xlink:href="img/spritemap.svg#icon-landing-slider-right"></use>
+              </svg>
+            </div>
+          </div>
+        </div>        
+      </div>
+      <!-- Slider main container -->
+      <div class="swiper-container landing__testimonials_slider">
+          <!-- Additional required wrapper -->
+          <div class="swiper-wrapper">
+
+            <% for(var i=1; i<=6; i++) {%>
+            <!-- Slides -->
+            <div class="swiper-slide">
+              <div class="slide--text">“I love Erny because it's been picked up by every department at Hush. I can use it to communicate our company story and priorities, and see what's going on across teams even as we grow rapidly.”</div>
+              <div class="slide--author">
+                <div class="photo">
+                  <img src="./img/landing-slider-auhtor.jpg" alt="">
+                </div>                
+                <div class="name">
+                  <b>
+                    <% if (i % 2 == 0) { %>
+                      Daniel Xin
+                    <% }else{ %>
+                      Alex Lin
+                    <% } %>
+                  </b>
+                  <span>Founder & Ceo Hush</span>
+                </div>                
+              </div>
+            </div>
+            <% } %>
+          </div>
+          <!-- If we need pagination -->
+          <div class="swiper-pagination"></div>          
+        </div>    
+  </article>
+  <article class="landing_started">
+    <div class="wrapper">
+      <h3>Ready to get started?</h3>
+      <div class="landing__text">We'd love to have you, sign up today and start your journey towards improving your product knowledge.</div>
+      <div class="landing__buttons">
+        <a href="homepage-all-categories.html" class="btn green">Get Started</a>
+      </div>
+    </div>    
+  </article>
+</main>
+
+<%= _.template(require('./../imports/_footer.html').default)(data) %>

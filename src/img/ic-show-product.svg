@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="75" height="75" viewBox="0 0 75 75">
+    <defs>
+        <linearGradient id="a" x1="35.666%" x2="90.613%" y1="18.749%" y2="78.356%">
+            <stop offset="0%" stop-color="#FAFBFF"/>
+            <stop offset="100%" stop-color="#F2F5FE"/>
+        </linearGradient>
+        <rect id="c" width="24" height="48" x="20" y="13" rx="12"/>
+        <filter id="b" width="500%" height="250%" x="-250%" y="-83.3%" filterUnits="objectBoundingBox">
+            <feMorphology in="SourceAlpha" radius="10" result="shadowSpreadOuter1"/>
+            <feOffset dy="20" in="shadowSpreadOuter1" result="shadowOffsetOuter1"/>
+            <feGaussianBlur in="shadowOffsetOuter1" result="shadowBlurOuter1" stdDeviation="20"/>
+            <feColorMatrix in="shadowBlurOuter1" values="0 0 0 0 0.243137255 0 0 0 0 0.82745098 0 0 0 0 0.501960784 0 0 0 1 0"/>
+        </filter>
+        <path id="e" d="M44 24.5v3a9.5 9.5 0 0 0 0 19v3c-6.904 0-12.5-5.596-12.5-12.5S37.096 24.5 44 24.5z"/>
+        <filter id="d" width="960%" height="480%" x="-480%" y="-160%" filterUnits="objectBoundingBox">
+            <feMorphology in="SourceAlpha" radius="10" result="shadowSpreadOuter1"/>
+            <feOffset dy="20" in="shadowSpreadOuter1" result="shadowOffsetOuter1"/>
+            <feGaussianBlur in="shadowOffsetOuter1" result="shadowBlurOuter1" stdDeviation="20"/>
+            <feColorMatrix in="shadowBlurOuter1" values="0 0 0 0 0.243137255 0 0 0 0 0.82745098 0 0 0 0 0.501960784 0 0 0 1 0"/>
+        </filter>
+    </defs>
+    <g fill="none" fill-rule="evenodd">
+        <circle cx="37.5" cy="37.5" r="37.5" fill="url(#a)"/>
+        <circle cx="44" cy="37" r="11" stroke="#6E72CC" stroke-width="3"/>
+        <use fill="#000" filter="url(#b)" xlink:href="#c"/>
+        <use fill="#3DD280" xlink:href="#c"/>
+        <g>
+            <use fill="#000" filter="url(#d)" xlink:href="#e"/>
+            <use fill="#FFF" xlink:href="#e"/>
+        </g>
+    </g>
+</svg>

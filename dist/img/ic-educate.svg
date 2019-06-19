@@ -1,0 +1,54 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="75" height="75" viewBox="0 0 75 75">
+    <defs>
+        <linearGradient id="a" x1="35.666%" x2="90.613%" y1="18.749%" y2="78.356%">
+            <stop offset="0%" stop-color="#FAFBFF"/>
+            <stop offset="100%" stop-color="#F2F5FE"/>
+        </linearGradient>
+        <path id="c" d="M23.225 5.412C16.376.321 8.635-.994 0 1.468v30.303c7.817-1.738 15.559.158 23.225 5.688V5.412z"/>
+        <filter id="b" width="516.7%" height="322.6%" x="-258.3%" y="-107.5%" filterUnits="objectBoundingBox">
+            <feMorphology in="SourceAlpha" radius="10" result="shadowSpreadOuter1"/>
+            <feOffset dy="20" in="shadowSpreadOuter1" result="shadowOffsetOuter1"/>
+            <feGaussianBlur in="shadowOffsetOuter1" result="shadowBlurOuter1" stdDeviation="20"/>
+            <feColorMatrix in="shadowBlurOuter1" values="0 0 0 0 0.243137255 0 0 0 0 0.82745098 0 0 0 0 0.501960784 0 0 0 1 0"/>
+        </filter>
+        <path id="d" d="M34.285.147v2c-7.67 0-11.472 1.329-16.214 5.35l-.657.557-.649-.568a20.8 20.8 0 0 0-3.34-2.395C9.29 2.711 5.581 2.106.552 2.144c-.344.003-.416.003-.552.003v-2L.537.145c5.354-.04 9.37.613 13.886 3.214A22.7 22.7 0 0 1 17.43 5.43C22.262 1.512 26.5.147 34.285.147z"/>
+        <path id="f" d="M34.285.147v2c-7.67 0-11.472 1.329-16.214 5.35l-.657.557-.649-.568a20.8 20.8 0 0 0-3.34-2.395C9.29 2.711 5.581 2.106.552 2.144c-.344.003-.416.003-.552.003v-2L.537.145c5.354-.04 9.37.613 13.886 3.214A22.7 22.7 0 0 1 17.43 5.43C22.262 1.512 26.5.147 34.285.147z"/>
+        <path id="h" d="M34.285.147v2c-7.67 0-11.472 1.329-16.214 5.35l-.657.557-.649-.568a20.8 20.8 0 0 0-3.34-2.395C9.29 2.711 5.581 2.106.552 2.144c-.344.003-.416.003-.552.003v-2L.537.145c5.354-.04 9.37.613 13.886 3.214A22.7 22.7 0 0 1 17.43 5.43C22.262 1.512 26.5.147 34.285.147z"/>
+        <path id="j" d="M34.285.147v2c-7.67 0-11.472 1.329-16.214 5.35l-.657.557-.649-.568a20.8 20.8 0 0 0-3.34-2.395C9.29 2.711 5.581 2.106.552 2.144c-.344.003-.416.003-.552.003v-2L.537.145c5.354-.04 9.37.613 13.886 3.214A22.7 22.7 0 0 1 17.43 5.43C22.262 1.512 26.5.147 34.285.147z"/>
+    </defs>
+    <g fill="none" fill-rule="evenodd">
+        <circle cx="37.5" cy="37.5" r="37.5" fill="url(#a)"/>
+        <g transform="translate(17 19)">
+            <use fill="#000" filter="url(#b)" xlink:href="#c"/>
+            <use fill="#3DD280" xlink:href="#c"/>
+        </g>
+        <g transform="translate(22.85 42.919)">
+            <mask id="e" fill="#fff">
+                <use xlink:href="#d"/>
+            </mask>
+            <use fill="#FFF" fill-rule="nonzero" xlink:href="#d"/>
+            <path fill="#6E72CC" d="M17.375-1H35.15v9.999H17.375z" mask="url(#e)"/>
+        </g>
+        <g transform="translate(22.85 36.92)">
+            <mask id="g" fill="#fff">
+                <use xlink:href="#f"/>
+            </mask>
+            <use fill="#FFF" fill-rule="nonzero" xlink:href="#f"/>
+            <path fill="#6E72CC" d="M17.375-1H35.15v9.999H17.375z" mask="url(#g)"/>
+        </g>
+        <g transform="translate(22.85 30.92)">
+            <mask id="i" fill="#fff">
+                <use xlink:href="#h"/>
+            </mask>
+            <use fill="#FFF" fill-rule="nonzero" xlink:href="#h"/>
+            <path fill="#6E72CC" d="M17.375-1H35.15v9.999H17.375z" mask="url(#i)"/>
+        </g>
+        <g transform="translate(22.85 24.921)">
+            <mask id="k" fill="#fff">
+                <use xlink:href="#j"/>
+            </mask>
+            <use fill="#FFF" fill-rule="nonzero" xlink:href="#j"/>
+            <path fill="#6E72CC" d="M17.375-1H35.15v9.999H17.375z" mask="url(#k)"/>
+        </g>
+    </g>
+</svg>

@@ -1,0 +1,173 @@
+<% var data = {
+  title: "Title",
+  type: "landing"
+}; %>
+<%= _.template(require('./../imports/_header.html').default)(data) %>
+
+<!-- <svg>
+  <use xlink:href="img/spritemap.svg#icon-rectangle"></use>
+</svg> -->
+
+<main class="landing">
+  <article class="landing__hero retailer">
+    <div class="landing__hero_img">
+      <img src="./img/bg-illustration.svg" alt="">
+    </div>    
+    <div class="wrapper">
+      <section>
+        <h3>Access a wide range of courses and education for leading healthcare products</h3>        
+        <div class="landing__buttons">
+          <a href="homepage-all-categories.html" class="btn short green">Get Started</a>
+        </div>
+      </section>
+    </div>
+  </article>
+
+  <% var list = [
+      {
+        icon: "retailer-list-1.svg",
+        title: "Centralised Product<br>Knowledge",
+        description: "Learn about all your favourite brands here in one place."
+      },
+      {
+        icon: "retailer-list-2.svg",
+        title: "Be the first to know",
+        description: "Always stay on top as we make sure to let you know what's new with your favourite brands."
+      },
+      {
+        icon: "retailer-list-3.svg",
+        title: "Erny always remembers",
+        description: "We keep a track record of all the courses you have done, so you don't have to worry about remembering."
+      }
+    ] %>
+  <ul class="landing__services retailer">
+    <% for(var i in list) {%>
+      <li>
+        <i>
+          <img src="./img/<%= list[i].icon %>" alt="">
+        </i>
+        <b><%= list[i].title %></b>
+        <span><%= list[i].description %></span>
+      </li>
+    <% } %>
+
+  </ul>
+
+  <article class="landing__bubble right brand">
+    <div class="wrapper">
+      <section>
+      <h3>Access Brand Content Instantly</h2>
+      <div class="landing__text">Erny is your new healthcare retail product encyclopedia with hundreds of leading retail brands continuously publishing new content.</div>
+    </section>
+    </div>
+  </article>
+  <article class="landing__bubble left free">
+    <div class="wrapper">
+      <section>
+      <h3>It’s Free!</h2>
+      <div class="landing__text">That's right, our learning content has no charge because we believe education should always be free. Up-skill and improve your product at no cost</div>
+    </section>
+    </div>
+  </article>
+
+  
+  <article class="landing__hit retailer">
+    <div class="landing__hit_bg">
+      <div class="wrapper">
+        <div class="landing__hit_title">How it works</div>
+        <h3>We make it easy</h3>
+        <ul class="landing__hit_switcher">
+          <li>
+            <a href="homepage-supplier.html">Supplier/Brand</a>
+          </li>
+          <li class="current">
+            <span>Retailer/Professional</span>
+          </li>
+        </ul>
+        <ul class="landing__hit_list">
+          <li>
+            <img src="./img/bg-hit-1.svg" alt="">
+            <section>
+              <div class="list--title">Sign up</div>
+              <div class="list--text">Click the sign up button above and gain access to our database in less than a minute!</div>
+            </section>
+          </li>
+          <li>
+            <img src="./img/bg-hit-2.svg" alt="">
+            <section>
+              <div class="list--title">Set your Profile</div>
+              <div class="list--text">Let us, and the community, know who you are by filling in the profile fields.</div>
+            </section>
+          </li>
+          <li>
+            <img src="./img/bg-hit-3.svg" alt="">
+            <section>
+              <div class="list--title">Start learning</div>
+              <div class="list--text">Go through our courses, start learning or perhaps save them for later</div>
+            </section>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </article>  
+  <article class="landing__testimonials">    
+      <div class="landing__testimonials_head">
+        <div class="wrapper">
+          <h3>Testimonials</h3>
+          <div class="slider--nav">
+            <div class="prev">
+              <svg>
+                <use xlink:href="img/spritemap.svg#icon-landing-slider-left"></use>
+              </svg>
+            </div>
+            <div class="next">
+              <svg>
+                <use xlink:href="img/spritemap.svg#icon-landing-slider-right"></use>
+              </svg>
+            </div>
+          </div>
+        </div>        
+      </div>
+      <!-- Slider main container -->
+      <div class="swiper-container landing__testimonials_slider">
+          <!-- Additional required wrapper -->
+          <div class="swiper-wrapper">
+
+            <% for(var i=1; i<=6; i++) {%>
+            <!-- Slides -->
+            <div class="swiper-slide">
+              <div class="slide--text">“I love Erny because it's been picked up by every department at Hush. I can use it to communicate our company story and priorities, and see what's going on across teams even as we grow rapidly.”</div>
+              <div class="slide--author">
+                <div class="photo">
+                  <img src="./img/landing-slider-auhtor.jpg" alt="">
+                </div>                
+                <div class="name">
+                  <b>
+                    <% if (i % 2 == 0) { %>
+                      Daniel Xin
+                    <% }else{ %>
+                      Alex Lin
+                    <% } %>
+                  </b>
+                  <span>Founder & Ceo Hush</span>
+                </div>                
+              </div>
+            </div>
+            <% } %>
+          </div>
+          <!-- If we need pagination -->
+          <div class="swiper-pagination"></div>          
+        </div>    
+  </article>
+  <article class="landing_started">
+    <div class="wrapper">
+      <h3>Ready to get started?</h3>
+      <div class="landing__text">We'd love to have you, sign up today and start your journey towards improving your product knowledge.</div>
+      <div class="landing__buttons">
+        <a href="homepage-all-categories.html" class="btn green">Get Started</a>
+      </div>
+    </div>    
+  </article>
+</main>
+
+<%= _.template(require('./../imports/_footer.html').default)(data) %>

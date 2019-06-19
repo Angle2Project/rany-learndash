@@ -1,0 +1,84 @@
+<% var data = {
+  title: "Title",
+  type: "internal"
+}; %>
+<%= _.template(require('./../imports/_header.html').default)(data) %>
+
+<!-- <svg>
+  <use xlink:href="img/spritemap.svg#icon-rectangle"></use>
+</svg> -->
+
+<main class="notifications">
+  <div class="notifications__wrapper">
+    <div class="head">
+      <h5>Notifications</h5>
+      <a href="">
+        <svg class="icon-settings">
+          <use xlink:href="img/spritemap.svg#icon-settings"></use>
+        </svg>
+      </a>
+    </div>
+    <div class="list">
+      <time>Newest</time>
+      <div class="notification">
+        <div class="photo">
+          <img src="./img/avatars.jpg" alt="">
+        </div>
+        <div class="message">
+          <div class="message--text"><b>Announcement</b> “Learn about pharmachies live today”</div>
+          <div class="message--status">
+            <svg class="icon-ic-announcement">
+              <use xlink:href="img/spritemap.svg#icon-ic-announcement"></use>
+            </svg>
+            <span>a minutes ago</span>
+          </div>
+        </div>
+      </div>
+      <time>Yesterday</time>
+      <div class="notification">
+        <div class="photo">
+          <img src="./img/profile-photo.jpg" alt="">
+        </div>
+        <div class="message">
+          <div class="message--text"><b>Jonny</b> like your comment in <b>expert pharmachies in 7 days</b></div>
+          <div class="message--status">
+            <svg class="icon-ic-like">
+              <use xlink:href="img/spritemap.svg#icon-ic-like"></use>
+            </svg>
+            <span>a minutes ago</span>
+          </div>
+        </div>
+      </div>
+      <div class="notification">
+        <div class="photo">
+          <img src="./img/avatars.jpg" alt="">
+        </div>
+        <div class="message">
+          <div class="message--text"><b>Ariana</b> reply your comment <b>how to become an expert</b></div>
+          <div class="message--status">
+            <svg class="icon-ic-comment">
+              <use xlink:href="img/spritemap.svg#icon-ic-comment"></use>
+            </svg>
+            <span>a minutes ago</span>
+          </div>
+        </div>
+      </div>
+      <div class="notification">
+        <div class="photo">
+          <img src="./img/avatars.jpg" alt="">
+        </div>
+        <div class="message">
+          <div class="message--text"><b>Announcement</b> “Learn about pharmachies live today”</div>
+          <div class="message--status">
+            <svg class="icon-ic-announcement">
+              <use xlink:href="img/spritemap.svg#icon-ic-announcement"></use>
+            </svg>
+            <span>a minutes ago</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</main>
+
+<%= _.template(require('./../imports/_footer.html').default)(data) %>
