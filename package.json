@@ -10,7 +10,7 @@
     "build": "webpack --mode production && prettier --print-width=120 --parser html --write dist/*.html"
   },
   "dependencies": {
-    "jquery": "^3.4.0",
+    "jquery": "^3.5.0",
     "normalize.css": "^8.0.1",
     "swiper": "^4.5.0"
   },
